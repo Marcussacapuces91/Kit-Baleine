@@ -25,5 +25,11 @@ Tout monté et soudé, on obtient :
 
 ![CI-monté](/CI-monte.jpg)
 
+## Impression 3D
+La seconde partie du projet est un motif en impression 3D : une baleine évidemment.
+
+[Pinterest - Dessin de baleine](https://www.pinterest.com.mx/pin/305892999670073241/)
+
+Les fichiers sont  dans le répertoire [/openScad](/openScad/).
 
 
