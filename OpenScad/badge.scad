@@ -7,11 +7,17 @@ module CI() {
 
 module baleine() {
     intersection() {
-        translate([0,0,5]) scale([0.15,0.15,1]) scale([2,2,1]) // minkowski() {
+/*
+        translate([0,0,5]) scale([0.15,0.15,1]) scale([2,2,1])  minkowski() {
             surface(file="contour_2.png",center=true,invert=true);
-//          sphere(r=0.5,center=true,$fn=8);
-//        }
+            sphere(r=0.5,center=true,$fn=8);
+        }
+*/        
+        translate([0,0,5]) scale([0.15,0.15,1]) scale([2,2,1]) surface(file="contour_2.png",center=true,invert=true);
         translate([0,0,0]) cube([100,80,1.5],center=true);
+    }
+    for (z=[0,1.5,3]) {
+        translate([0,-32.5,-5+z]) rotate([-25,0,0]) cube([50,1.5,10-z*2],center=true);
     }
 }
 
@@ -25,7 +31,9 @@ translate([14.5,-12,-6]) rotate([0,0,90]) {
 // Bloc interne
         translate([2,0,0])  cube([38.6+2-5,25+1,6.1],center=true);
 // Ouverture supérieure
-       translate([3,0,-5])  cube([38.6+2-5,25-2,6.1],center=true);
+       translate([2,0,-5])  cube([38.6+2-5,25-2,6.1],center=true);
+// Fente arrière
+       translate([-16.5,0,-4])  cube([5,7.5,6.1],center=true);
     }
 }
 
