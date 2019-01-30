@@ -7,24 +7,23 @@ module CI() {
 
 module baleine() {
     intersection() {
-/*
-        translate([0,0,5]) scale([0.15,0.15,1]) scale([2,2,1])  minkowski() {
-            surface(file="contour_2.png",center=true,invert=true);
-            sphere(r=0.5,center=true,$fn=8);
-        }
-*/        
+// Image baleine
         translate([0,0,5]) scale([0.15,0.15,1]) scale([2,2,1]) surface(file="contour_2.png",center=true,invert=true);
+// Tranche de 1.5 mm d'épaisseur
         translate([0,0,0]) cube([100,80,1.5],center=true);
     }
-    for (z=[0,1.5,3]) {
-        translate([0,-32.5,-5+z]) rotate([-25,0,0]) cube([50,1.5,10-z*2],center=true);
+    
+// Support    
+    translate([0,-30,0]) hull() {
+        cube([50,2.5,1],center=true);
+        translate([0,-5.4,-8]) rotate([90,0,90]) cylinder(d=1,h=50,center=true,$fn=8);
     }
 }
 
 baleine();
 
 translate([14.5,-12,-6]) rotate([0,0,90]) {
-//    CI();
+//    translate([3.5,0,0]) CI();
     translate([-1.3+2.5,0,2.2]) difference() {
 // Bloc externe
         cube([38.6+1-5,25+4,6.1+2],center=true);
