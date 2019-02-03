@@ -8,7 +8,7 @@ module CI() {
 module baleine() {
     intersection() {
 // Image baleine
-        translate([0,0,5]) scale([0.15,0.15,1]) scale([2,2,1]) surface(file="contour_2.png",center=true,invert=true);
+        translate([0,0,5]) scale([0.15,0.15,1]) scale([4,4,1]) surface(file="contour_4.png",center=true,invert=true);
 // Tranche de 1.5 mm d'épaisseur
         translate([0,0,0]) cube([100,80,1.5],center=true);
     }
@@ -23,11 +23,11 @@ baleine();
 
 translate([14.5,-12,-6]) rotate([0,0,90]) {
 //    translate([3.5,0,0]) CI();
-    translate([-1.3+2.5,0,2.2-0.5]) difference() {
+    translate([-1.3+2.5,0,2.2-0.25]) difference() {
 // Bloc externe
-        cube([38.6+1-5,25+4,6.1+3],center=true);
+        cube([38.6+1-5,25+3,6.1+2.5],center=true);
 // Bloc interne
-        translate([2,0,0])  cube([38.6+2-5,25+1,6.1+1],center=true);
+        translate([2,0,0]) cube([38.6+2-5,25+1,6.1+0.5],center=true);
 // Ouverture supérieure
        translate([2,0,-4.5])  cube([38.6+2-5,25-2,4],center=true);
 // Fente arrière
