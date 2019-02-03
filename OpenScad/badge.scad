@@ -8,7 +8,7 @@ module CI() {
 module baleine() {
     intersection() {
 // Image baleine
-        translate([0,0,5]) scale([0.15,0.15,1]) scale([4,4,1]) surface(file="contour_4.png",center=true,invert=true);
+        translate([0,0,5]) scale([0.15,0.15,1]) scale([2,2,1]) surface(file="contour_2.png",center=true,invert=true);
 // Tranche de 1.5 mm d'épaisseur
         translate([0,0,0]) cube([100,80,1.5],center=true);
     }
