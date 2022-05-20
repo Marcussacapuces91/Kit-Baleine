@@ -30,6 +30,4 @@ La seconde partie du projet est un motif en impression 3D : une baleine évidemm
 
 [Pinterest - Dessin de baleine](https://www.pinterest.com.mx/pin/305892999670073241/)
 
-Les fichiers sont  dans le répertoire [/openScad](/openScad/).
-
-
+Les fichiers sont dans le répertoire https://github.com/Marcussacapuces91/Kit-Baleine/tree/master/OpenScad.
